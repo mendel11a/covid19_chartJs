@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
 import covid19 from './images/covid19.png';
+import HomeScreen from './components/HomeScreen';
+import DailyScreen from './components/DailyScreen';
+import WeeklyScreen from './components/WeeklyScreen';
+import MonthlyScreen from './components/MonthlyScreen';
+import SearchScreen from './components/SearchScreen';
+
+
 
 function App() {
 
-
   return (
-    <div className="grid-container">
-      <header>
-        <img className="image" src={covid19} />
-      </header>
-      <main className="main">
-        <div className="content">
-          <Route path="/" exact={true} component={HomeScreen} />
-        </div>
-      </main>
+    <BrowserRouter>
+      <div className="grid-container">
+        <header>
+          <img className="image" src={covid19} />
+        </header>
+        <main className="main">
+          <div className="content">
+            <Route path="/searchByDate" exact={true} component={SearchScreen} />
+            <Route path="/monthly" exact={true} component={MonthlyScreen} />
+            <Route path="/weekly" exact={true} component={WeeklyScreen} />
+            <Route path="/daily" exact={true} component={DailyScreen} />
+            <Route path="/" exact={true} component={HomeScreen} />
+          </div>
+        </main>
 
-    </div>
+      </div>
+    </BrowserRouter>
+
   );
+
 }
 
 export default App;
