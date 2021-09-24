@@ -8,14 +8,26 @@ body {
   flex-direction: column;
 }
 
+.main {
+  grid-area: main;
+  margin-top: 1rem;
+}
 .image {
   width: 300px;
   margin-top: 10px;
 }
-
 #root{
   height:100%;
 }
+.button{
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+:hover {
+  color:green;
+}
+
 
 @media only screen and (max-width: 770px) {
   .grid-container {

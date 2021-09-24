@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import covid19 from './images/covid19.png';
 import HomeScreen from './components/HomeScreen';
 import DailyScreen from './components/DailyScreen';
@@ -15,7 +15,9 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
         <header>
+        <Link to='/'>
           <img className="image" src={covid19} />
+        </Link>
         </header>
         <main className="main">
           <div className="content">
