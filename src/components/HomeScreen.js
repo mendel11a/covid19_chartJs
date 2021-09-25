@@ -6,12 +6,9 @@ function HomeScreen() {
 
 
   return (
-    <div className="grid-container">
-      <main className="main">
+    <div>
         <ButtonsLayout></ButtonsLayout>
         <BarChart></BarChart>
-      </main>
-
     </div>
   );
 }

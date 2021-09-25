@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 function ButtonsLayout(){
     const history = useHistory();
-    const dailyOption = () =>{
+    const pastDayOption = () =>{
         history.push('/daily/' );
     }
     const weeklyOption = () =>{
@@ -18,7 +18,7 @@ function ButtonsLayout(){
 
     return (
         <div className="container">
-          <button className="button"  onClick={dailyOption}>היום</button>
+          <button className="button"  onClick={pastDayOption}>אתמול</button>
           <button className="button"  onClick={weeklyOption}>השבוע האחרון</button>
           <button className="button"  onClick={monthlyOption}>החודש האחרון</button>
           <button className="button"  onClick={searchOption}>מותאם</button>

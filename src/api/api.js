@@ -1,29 +1,50 @@
 import axios from 'axios';
 
 const url = 'https://api.covid19api.com';
-
-const fetchDailyData =(countries)=> async () => {
-    // var today = new Date();
-    // var month=today.getMonth()+1;
-    // var day=today.getDate();
-    // var data={}
-    // if(month<10){
-    //     month="0"+today.getMonth()+1;
-    // }
-    // if(day<10){
-    //     month="0"+today.getDate();
-    // }
-    // var date = today.getFullYear()+'-'+month+'-'+day;
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    let today = new Date().toISOString().slice(0, 10)
-    var pastDate = new Date();
-    pastDate.setDate((d.getDate() - 1).toISOString().slice(0,10));
+var countries=['Israel','Italy','Spain','Sweden','Germany']
+export const fetchDailyData = async () => {
+    var today = new Date();
+    var yesterday = new Date();
+    yesterday.setDate(today.getDate() - 2);
+    var month=yesterday.getMonth()+1;
+    var day=yesterday.getDate();
+    if(month<10){
+        month="0"+(yesterday.getMonth()+1);
+    }
+    if(day<10){
+        month="0"+yesterday.getDate();
+    }
+    var date = yesterday.getFullYear()+'-'+month+'-'+day;
+    var beginningTime = "00:00:00";
+    var endingTIme = "23:59:59"
     try {
-        countries.map((country) => 
-        data+=await axios.get(`${url}/country/${country}?from=${pastDate}T${time}Z&/to=${today}T${time}Z`));
+       //const {data} = await axios.get(`${url}/country/israel?from=${date}T${beginningTime}Z&to=${date}T${endingTIme}Z`);
+      // console.log('the data',data);
+ 
+      const data =  Promise.all(countries.map(async(country) =>{
+      
+      const currentRes =  await axios.get(`${url}/country/${country}?from=${date}T${beginningTime}Z&to=${date}T${endingTIme}Z`)
+      .then( (response ) => {return response.data;});  
+      return currentRes;
+      })).then ( (promiseResults) =>{ 
+        return promiseResults.map( ( singleResponse )=> {  
+          console.log(singleResponse);
+           return ({ Confirmed: singleResponse[0].Confirmed, Recovered:singleResponse[0].Recovered, Deaths: singleResponse[0].Deaths, Active : singleResponse[0].Active});
+        } );
+      }); 
+    
+      console.log(data);
+      return  data; 
+     
+  }
+    // try {
+    //   const {data}=await axios.get(`${url}/country/israel?from=${date}T${beginningTime}Z&to=${date}T${endingTIme}Z`);
 
-        return data.map(({ Confirmed, Recovered, Deaths, Active }) => ({ Confirmed: positive, Recovered, Deaths: death, Active }));
-    } 
+    //     //const data=countries.map(async(country) =>
+    //     //     await axios.get(`${url}/country/${country}?from=${date}T${beginningTime}Z&/to=${date}T${endingTIme}Z`));
+    //     console.log('the data',data);
+    //     return data.map(({ Confirmed, Recovered, Deaths, Active }) => ({ Confirmed: Confirmed, Recovered:Recovered, Deaths: Deaths, Active }));
+    // } 
     catch (error) {
       return error;
     }
