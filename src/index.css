@@ -32,7 +32,22 @@ body {
   color: #ffffff;
   padding: 0.5rem;
 }
-
+.imageCovid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .buttons-container .button{
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: #56d798;
+  cursor: pointer;
+}
 
 .main {
   grid-area: main;
@@ -43,29 +58,23 @@ body {
   margin-top: 10px;
 }
 
-.button{
-  font-size: 1.2rem;
-  padding: 0.2rem;
-  cursor: pointer;
-}
+
 :hover {
   color:green;
 }
-.chart-container{
+.flex-container{
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  width:100%;
+  width:100%; 
+  margin-top: 20px;
 }
-.chart-container li{
-  list-style-type: none;
-  padding: 0;
-  flex: 0 1 34rem;
-  margin: 1rem;
-  height: 50rem;
-  border-bottom: 0.1rem #c0c0c0 solid;
+.flex-child{
+  flex:1;
+  border: 2px solid rgb(180, 20, 172);
 }
-
+.flex-child:first-child {
+  margin-right: 20px;
+} 
 @media only screen and (max-width: 770px) {
   .grid-container {
     margin: 0 10%;

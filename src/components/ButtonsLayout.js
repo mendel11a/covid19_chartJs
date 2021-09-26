@@ -17,7 +17,7 @@ function ButtonsLayout(){
     }
 
     return (
-        <div className="container">
+        <div className="buttons-container">
           <button className="button"  onClick={pastDayOption}>אתמול</button>
           <button className="button"  onClick={weeklyOption}>השבוע האחרון</button>
           <button className="button"  onClick={monthlyOption}>החודש האחרון</button>

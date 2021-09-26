@@ -15,20 +15,20 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
         <header>
-          <div>
+          <div className="imageCovid">
             <Link to='/'>
               <img className="image" src={covid19} alt={covid19} />
             </Link>
           </div>
         </header>
         <main className="main">
-          <div className="content">
+          <>
             <Route path="/searchByDate" exact={true} component={SearchScreen} />
             <Route path="/monthly" exact={true} component={MonthlyScreen} />
             <Route path="/weekly" exact={true} component={WeeklyScreen} />
             <Route path="/daily" exact={true} component={pastDayScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-          </div>
+          </>
         </main>
 
       </div>
