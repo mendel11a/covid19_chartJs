@@ -17,7 +17,7 @@ function App() {
         <header>
           <div>
             <Link to='/'>
-              <img className="image" src={covid19} />
+              <img className="image" src={covid19} alt={covid19} />
             </Link>
           </div>
         </header>

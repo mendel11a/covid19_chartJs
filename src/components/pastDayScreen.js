@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import ButtonsLayout from './ButtonsLayout';
 import BarChart from './BarChart';
-import fetchDailyData from '../api/api'
-
+import fetchData from '../api/api'
 
 function DailyScreen() {
-  const [pastDayData,setData]=useState({});
+  const [pastDayData,setPastDayData]=useState(null);
 
-  useEffect(async()=>{
-    console.log('hye');
-    const data= await fetchDailyData();
-    console.log('data',data);
-    console.log('helloe');
-    setData({data});
-    console.log("pastDayData",pastDayData);
-    // return ()=>{
-
-    // };
+  useEffect(()=>{
+    const getData=async()=>{
+      console.log('hye');
+      const data= await fetchData(0);
+      console.log('data',data);
+      console.log('helloe');
+      setPastDayData(data);    
+      console.log("pastDayData",pastDayData);
+    }
+    getData();
   },[]);
 
   return (
     <>
       <ButtonsLayout/>
-      <BarChart/>
+      {pastDayData && <BarChart data={pastDayData}/>}
     </>
   );
 }

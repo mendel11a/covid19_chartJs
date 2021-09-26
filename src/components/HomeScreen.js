@@ -3,12 +3,12 @@ import ButtonsLayout from './ButtonsLayout';
 import BarChart from './BarChart';
 
 function HomeScreen() {
-
+  var emptyArray = new Array(5).fill(0);
 
   return (
     <div>
-        <ButtonsLayout></ButtonsLayout>
-        <BarChart></BarChart>
+      <ButtonsLayout></ButtonsLayout>
+       <BarChart data={emptyArray}></BarChart>
     </div>
   );
 }
