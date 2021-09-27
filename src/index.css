@@ -69,12 +69,43 @@ body {
   margin-top: 20px;
 }
 .flex-child{
+  margin-left:0.5rem;
+  margin-right:0.5rem;
   flex:1;
   border: 2px solid rgb(180, 20, 172);
 }
 .flex-child:first-child {
   margin-right: 20px;
-} 
+}
+.flex-incontainer{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%; 
+  margin-top: 50px;
+}
+.flex-child{
+  flex:1;
+  border: 2px solid rgb(180, 20, 172);
+}
+.flex-child:first-child {
+  margin-right: 20px;
+}
+.time{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%; 
+  margin-top: 10px;
+}
+.time-child{
+  flex:1;
+  border: 2px solid rgb(180, 20, 172);
+}
+.time-child:first-child {
+  margin-right: 20px;
+
+}
+
+
 @media only screen and (max-width: 770px) {
   .grid-container {
     margin: 0 10%;

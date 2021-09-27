@@ -6,7 +6,7 @@ function HomeScreen() {
   var emptyArray = new Array(5).fill(0);
 
   return (
-    <div>
+    <div>``
       <ButtonsLayout></ButtonsLayout>
        <BarChart data={emptyArray}></BarChart>
     </div>

@@ -8,12 +8,8 @@ function WeeklyScreen() {
 
   useEffect(()=>{
     const getData=async()=>{
-      console.log('hye');
       const data= await fetchData(1);
-      console.log('data',data);
-      console.log('helloe');
       setPastDayData(data);    
-      console.log("pastDayData",pastDayData);
     }
     getData()
   },[]);
