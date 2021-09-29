@@ -82,6 +82,7 @@ body {
   flex-wrap: wrap;
   width:100%; 
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .flex-child{
   flex:1;
@@ -92,16 +93,14 @@ body {
 }
 .time{
   display: flex;
-  flex-wrap: wrap;
-  width:100%; 
   margin-top: 10px;
+  justify-content:center;
+  align-items: center;
 }
-.time-child{
-  flex:1;
-  border: 2px solid rgb(180, 20, 172);
-}
-.time-child:first-child {
-  margin-right: 20px;
+.text-center{
+display: flex;
+justify-content:center;
+align-items: center;
 }
 
 @media only screen and (max-width: 770px) {
@@ -121,14 +120,6 @@ body {
     margin-bottom: 5px;
     margin-right: 5px;
   }
-
-  /* .flex-child{
-    padding: 2px;
-  }
-.flex-child:first-child {
-  padding: 2px;
-} */
-
   .image {
     width: 100%;
   }
