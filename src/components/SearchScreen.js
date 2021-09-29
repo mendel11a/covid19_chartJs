@@ -24,11 +24,13 @@ function SearchScreen() {
   return (
     <>
       <ButtonsLayout></ButtonsLayout>
-      <Calendar
-        onChange={setTime}
-        value={time}
-        selectRange={true}
-      />
+      <div className="time"> 
+        <Calendar
+          onChange={setTime}
+          value={time}
+          selectRange={true}
+        />
+      </div>
       {time.length > 0 ? (
                 <p className='text-center'>
                     <span className='bold'>Start:</span>{' '}

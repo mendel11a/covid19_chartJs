@@ -7,6 +7,7 @@ function Charts(chartData) {
         <>
             <div className="flex-container">
                 <div className="flex-child bar-chart">
+
                     <Bar
                         data={{
                             labels: ['Israel', 'Italy', 'Spain', 'Sweden', 'Germany'],
@@ -30,7 +31,7 @@ function Charts(chartData) {
                             responsive: true,
                             maintainAspectRatio: false,
                             legend: { display: false },
-                            title: { display: true, text: `Current state in ` },
+                            title: { display: true, text: `Current state in `},
                         }}
 
                     />
