@@ -47,7 +47,8 @@ function BarChart(chartData) {
                                             "#56d798",
                                             "#ff8397",
                                             "#6970d5",
-                                            "#00ffff"], data: [chartData.data[0].Deaths, chartData.data[1].Deaths, chartData.data[2].Deaths,
+                                            "#00ffff"], 
+                                    data: [chartData.data[0].Deaths, chartData.data[1].Deaths, chartData.data[2].Deaths,
                                             chartData.data[3].Deaths, chartData.data[4].Deaths]
                                 },
 
@@ -108,7 +109,8 @@ function BarChart(chartData) {
                                             "#56d798",
                                             "#ff8397",
                                             "#6970d5",
-                                            "#00ffff"], data: [chartData.data[0].Recovered, chartData.data[1].Recovered, chartData.data[2].Recovered,
+                                            "#00ffff"], 
+                                            data: [chartData.data[0].Recovered, chartData.data[1].Recovered, chartData.data[2].Recovered,
                                             chartData.data[3].Recovered, chartData.data[4].Recovered]
                                 },
 
@@ -125,7 +127,6 @@ function BarChart(chartData) {
                     />
                 </div>
             </div>
-        );
         </>
     );
 }
