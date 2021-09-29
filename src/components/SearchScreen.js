@@ -19,7 +19,7 @@ function SearchScreen() {
       setPastDayData(data);
     }
     getData();
-  }, time);
+  }, [time]);
   return (
     <>
       <ButtonsLayout></ButtonsLayout>
