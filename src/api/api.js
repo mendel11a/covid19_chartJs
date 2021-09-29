@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useLayoutEffect } from 'react';
 
 const url = 'https://api.covid19api.com';
 var countries = ['Israel', 'Italy', 'Spain', 'Sweden', 'Germany']
@@ -19,6 +18,8 @@ export const fetchData = async (days) => {
       break;
     case 2:
       timeAgo = 30;
+      break;
+    default:
       break;
   }
   console.log("timeAgo",timeAgo);
@@ -53,10 +54,10 @@ export const fetchFromChosenDates = async (time) => {
 
   let fromDate=new Date((time[0]).getTime()-(offset*60*1000)).toISOString().split('T')[0];
   let toDate=new Date((time[1]).getTime()-(offset*60*1000)).toISOString().split('T')[0];
-  if (toDate == choosePastTime(0) ){ // if the user wants the current day,because the api has a problem fetching data from the current day, i return the pastday
+  if (toDate === choosePastTime(0) ){ // if the user wants the current day,because the api has a problem fetching data from the current day, i return the pastday
     toDate=choosePastTime(1);
     };
-  if (fromDate == choosePastTime(0) ){ // if the user wants the current day,because the api has a problem fetching data from the current day, i return the pastday
+  if (fromDate === choosePastTime(0) ){ // if the user wants the current day,because the api has a problem fetching data from the current day, i return the pastday
     fromDate=choosePastTime(1);
     }
   try {
