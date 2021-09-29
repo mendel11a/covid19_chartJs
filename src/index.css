@@ -105,9 +105,12 @@ body {
 }
 
 @media only screen and (max-width: 770px) {
-  .grid-container {
+  /* .grid-container {
     margin: 0 10%;
-  }
+  } */
+  .flex-child:first-child {
+  margin-right: 5px;
+}
 
   .image {
     width: 100%;

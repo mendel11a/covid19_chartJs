@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonsLayout from './ButtonsLayout';
-import BarChart from './BarChart';
+import Charts from './BarChart';
 
 function HomeScreen() {
   var emptyArray = new Array(5).fill(0);
@@ -8,7 +8,7 @@ function HomeScreen() {
   return (
     <div>``
       <ButtonsLayout></ButtonsLayout>
-       <BarChart data={emptyArray}></BarChart>
+       <Charts data={emptyArray}/>
     </div>
   );
 }

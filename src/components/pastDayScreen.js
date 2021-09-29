@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ButtonsLayout from './ButtonsLayout';
-import BarChart from './BarChart';
+import Charts from './BarChart';
 import fetchData from '../api/api'
 
 function DailyScreen() {
@@ -17,7 +17,7 @@ function DailyScreen() {
   return (
     <>
       <ButtonsLayout/>
-      {pastDayData && <BarChart data={pastDayData}/>}
+      {pastDayData && <Charts data={pastDayData}/>}
     </>
   );
 }

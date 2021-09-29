@@ -3,7 +3,7 @@ import ButtonsLayout from './ButtonsLayout';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { fetchFromChosenDates } from '../api/api';
-import BarChart from './BarChart';
+import Charts from './BarChart';
 
 
 
@@ -43,7 +43,7 @@ function SearchScreen() {
                         {time.toISOString().split('T')[0]}
                     </p>
                 )}
-      {pastDayData && <BarChart data={pastDayData} />}
+      {pastDayData && <Charts data={pastDayData} />}
     </>
 
   );
