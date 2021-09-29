@@ -22,7 +22,6 @@ export const fetchData = async (days) => {
     default:
       break;
   }
-  console.log("timeAgo",timeAgo);
   let date =choosePastTime(timeAgo)
   let currentDay=choosePastTime(1); // i set the current day to yesterday because the api cant fetch data from the current day
   try {
@@ -34,13 +33,11 @@ export const fetchData = async (days) => {
       return currentRes;
     })).then((promiseResults) => {
       return promiseResults.map((singleResponse) => {
-        console.log(singleResponse);
         return ({ Confirmed: singleResponse[0].Confirmed, Recovered: singleResponse[0].Recovered,
            Deaths: singleResponse[0].Deaths, Active: singleResponse[0].Active });
       });
     });
 
-    console.log("data",data);
     return data;
 
   }
