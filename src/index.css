@@ -102,9 +102,7 @@ body {
 }
 .time-child:first-child {
   margin-right: 20px;
-
 }
-
 
 @media only screen and (max-width: 770px) {
   .grid-container {
