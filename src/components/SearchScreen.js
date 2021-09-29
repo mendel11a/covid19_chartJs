@@ -13,7 +13,6 @@ function SearchScreen() {
   const [pastDayData, setPastDayData] = useState(null);
   const [time, setTime] = useState([new Date(),new Date()]);
 
-
   useEffect(() => {
     const getData = async () => {
       const data = await fetchFromChosenDates(time);

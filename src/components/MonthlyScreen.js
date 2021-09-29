@@ -8,7 +8,6 @@ function MonthlyScreen() {
 
   useEffect(()=>{
     const getData=async()=>{
-      console.log('hye');
       const data= await fetchData(2);
       setPastDayData(data);    
     }
