@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
 
-function BarChart(chartData) {
+function Charts(chartData) {
     return (
         <>
             <div className="flex-container">
@@ -131,4 +131,4 @@ function BarChart(chartData) {
     );
 }
 
-export default BarChart;
+export default Charts;
