@@ -5,6 +5,4 @@ The statistics that are showed to him are the followings: Confirmed,Recovered,De
 Each one of them is displayed inside a different chart so that the user will see overall 4 charts in the screen.
 
 
-![alt text](http://url/to/img.png)
-
 
