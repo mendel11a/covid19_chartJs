@@ -4,5 +4,7 @@ The user can choose to see the the statistics the past day, a week ago, a month 
 The statistics that are showed to him are the followings: Confirmed,Recovered,Deaths and Active.
 Each one of them is displayed inside a different chart so that the user will see overall 4 charts in the screen.
 
-
+## Usage
+### The Home screen:
+![test200](https://user-images.githubusercontent.com/14842875/122656557-446f1f00-d164-11eb-8bb7-b828a0f6728d.jpg) <br/><br/>
 
