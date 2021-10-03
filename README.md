@@ -5,6 +5,8 @@ The statistics that are showed to him are the followings: Confirmed,Recovered,De
 Each one of them is displayed inside a different chart so that the user will see overall 4 charts in the screen.
 
 ## Usage
+### Link to the system:
+https://covid19-chart-stats.netlify.app/
 ### The Home screen:
 ![test200](https://github.com/mendel11a/covid19_chartJs/blob/main/images/Screnn%20shot.png) <br/><br/>
 
