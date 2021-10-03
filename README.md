@@ -6,5 +6,5 @@ Each one of them is displayed inside a different chart so that the user will see
 
 ## Usage
 ### The Home screen:
-![test200](https://user-images.githubusercontent.com/14842875/122656557-446f1f00-d164-11eb-8bb7-b828a0f6728d.jpg) <br/><br/>
+![test200](https://github.com/mendel11a/covid19_chartJs/blob/main/images/Screnn%20shot.png) <br/><br/>
 
