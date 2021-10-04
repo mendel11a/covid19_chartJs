@@ -42,7 +42,6 @@ export const fetchData = async (days) => {
       return currentRes;
     })).then((promiseResults) => {
       return promiseResults.map((singleResponse) => {
-        console.log(singleResponse);
         return ({
           Confirmed: singleResponse[0].Confirmed, Recovered: singleResponse[0].Recovered,
           Deaths: singleResponse[0].Deaths, Active: singleResponse[0].Active

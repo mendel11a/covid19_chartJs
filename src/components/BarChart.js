@@ -4,7 +4,6 @@ import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 const colorsArray= ["#f38b4a","#56d798","#ff8397","#6970d5","#00ffff"]
 const countriesArray =['Israel', 'Italy', 'Spain', 'Sweden', 'Germany']
 function Charts(chartData) {
-    console.log("chartData",chartData);
     return (
         <>
             <div className="flex-container">
