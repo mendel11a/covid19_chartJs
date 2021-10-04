@@ -7,9 +7,10 @@ function DailyScreen() {
   const [pastDayData,setPastDayData]=useState(null);
 
   useEffect(()=>{
-    const getData=async()=>{
+    const getData=async ()=>{
       const data= await fetchData(0);
-      setPastDayData(data);    
+      console.log("data",data);
+      setPastDayData(data);
     }
     getData();
   },[]);
