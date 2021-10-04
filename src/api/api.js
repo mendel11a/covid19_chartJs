@@ -36,7 +36,7 @@ export const fetchData = async (days) => {
           'Content-Type': 'application/json'
         },
         responseType: 'json',
-        httpsAgent: new https.Agent({ rejectUnauthorized: false }) // to overcome SSL certificate
+        httpsAgent: new https.Agent({ rejectUnauthorized: false }) // to surpass SSL certificate
       })
         .then((response) => { return response.data; });
       return currentRes;
@@ -78,7 +78,7 @@ export const fetchFromChosenDates = async (time) => {
           'Content-Type': 'application/json'
         },
         responseType: 'json',
-        httpsAgent: new https.Agent({ rejectUnauthorized: false }) // to overcome SSL certificate
+        httpsAgent: new https.Agent({ rejectUnauthorized: false }) // to surpass SSL certificate
       })
         .then((response) => { return response.data; });
       return currentRes;
